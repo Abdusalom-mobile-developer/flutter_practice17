@@ -17,40 +17,91 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        centerTitle: true,
-        title: Text(
-          "Yamaha Company",
-          style: TextStyle(color: Colors.white, fontFamily: "Signika"),
+        backgroundColor: Colors.grey[200],
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          centerTitle: true,
+          title: Text(
+            "Yamaha Company",
+            style: TextStyle(color: Colors.white, fontFamily: "Signika"),
+          ),
         ),
-      ),
-      body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Center(
-              child: Text(
-                "Welcome to Yamaha",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: "Signika",
-                    fontSize: 34,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-            Center(
-              child: Text(
-                "${HomePage.username}",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: "Signika",
-                    fontSize: 34,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
-          ]),
-    );
+        body: Center(
+          child: Image(
+            image: AssetImage("assets/images/motorbike.png"),
+            height: 200,
+            width: 300,
+            fit: BoxFit.cover,
+          ),
+        ));
   }
 }
+
+
+// Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           crossAxisAlignment: CrossAxisAlignment.stretch,
+//           children: [
+//             Center(
+//               child: Text(
+//                 "Hello ${HomePage.username}.",
+//                 style: TextStyle(
+//                     color: Colors.black,
+//                     fontFamily: "Signika",
+//                     fontSize: 38,
+//                     fontWeight: FontWeight.bold),
+//               ),
+//             ),
+//             SizedBox(
+//               height: 45,
+//             ),
+//             Center(
+//               child: Image(
+//                 image: AssetImage("assets/images/motorbike.png"),
+//                 height: 200,
+//                 width: 300,
+//                 fit: BoxFit.cover,
+//               ),
+//             )
+//           ]),
+
+
+
+// Stack(
+//           children: [
+//             Padding(
+//               padding: const EdgeInsets.only(top: 20, bottom: 80),
+//               child: Column(
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 children: [
+//                   Center(
+//                     child: Text(
+//                       "Hello ${HomePage.username}.",
+//                       style: TextStyle(
+//                           color: Colors.black,
+//                           fontFamily: "Signika",
+//                           fontSize: 38,
+//                           fontWeight: FontWeight.bold),
+//                     ),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.only(top: 250),
+//               child: Column(
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 children: [
+//                   Center(
+//                     child: Image(
+//                       image: AssetImage("assets/images/motorbike.png"),
+//                       height: 200,
+//                       width: 300,
+//                       fit: BoxFit.cover,
+//                     ),
+//                   )
+//                 ],
+//               ),
+//             )
+//           ],
+//         )
