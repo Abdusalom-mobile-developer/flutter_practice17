@@ -17,9 +17,9 @@ class _SignupPageState extends State<SignupPage> {
   TextEditingController _passwordController = TextEditingController();
 
   void _checkContorollers() {
-    if (_userNameController.text == "Abdusalom" &&
-        _emailAdressController.text == "Abdusalom@gmail.com" &&
-        _passwordController.text == "freedom") {
+    if (_userNameController.text.toLowerCase() == "abdusalom" &&
+        _emailAdressController.text.toLowerCase() == "abdusalom@gmail.com" &&
+        _passwordController.text.toLowerCase() == "freedom") {
       Navigator.pushReplacementNamed(context, HomePage.id);
     }
   }
