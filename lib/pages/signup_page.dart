@@ -17,9 +17,18 @@ class _SignupPageState extends State<SignupPage> {
   TextEditingController _passwordController = TextEditingController();
 
   void _checkContorollers() {
-    if (_userNameController.text.toLowerCase() == "abdusalom" &&
-        _emailAdressController.text.toLowerCase() == "abdusalom@gmail.com" &&
-        _passwordController.text.toLowerCase() == "freedom") {
+    // if (_userNameController.text.toLowerCase() == "abdusalom" &&
+    //     _emailAdressController.text.toLowerCase() == "abdusalom@gmail.com" &&
+    //     _passwordController.text.toLowerCase() == "freedom") {
+    //   Navigator.pushReplacementNamed(context, HomePage.id);
+    // }
+
+    if (_userNameController.text.toLowerCase().length >= 7 &&
+        _emailAdressController.text.toLowerCase().contains("@") &&
+        _passwordController.text.toLowerCase().length >= 7) {
+      HomePage.username = _userNameController.text;
+      HomePage.emailAddress = _emailAdressController.text.toLowerCase();
+      HomePage.password = _passwordController.text.toLowerCase();
       Navigator.pushReplacementNamed(context, HomePage.id);
     }
   }

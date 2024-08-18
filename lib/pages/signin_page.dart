@@ -15,8 +15,8 @@ class _SigninPageState extends State<SigninPage> {
   TextEditingController _passwordController = TextEditingController();
 
   _checkControllers() {
-    if (_emailAddressController.text.toLowerCase() == "abdusalom@gmail.com" &&
-        _passwordController.text.toLowerCase() == "freedom") {
+    if (_emailAddressController.text.toLowerCase() == HomePage.emailAddress &&
+        _passwordController.text.toLowerCase() == HomePage.password) {
       Navigator.pushReplacementNamed(
         context, HomePage.id
       );
