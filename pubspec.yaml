@@ -33,3 +33,9 @@ flutter:
     - family: Signika
       fonts:
         - asset: assets/fonts/Signika.ttf
+    - family: Matemasie
+      fonts:
+        - asset: assets/fonts/Matemasie.ttf
+    - family: Dancing
+      fonts:
+        - asset: assets/fonts/Dancing.ttf

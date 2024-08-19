@@ -23,7 +23,8 @@ class _HomePageState extends State<HomePage> {
           centerTitle: true,
           title: Text(
             "Yamaha Company",
-            style: TextStyle(color: Colors.white, fontFamily: "Signika"),
+            style: TextStyle(
+                color: Colors.white, fontFamily: "Dancing", fontSize: 27),
           ),
         ),
         body: Center(

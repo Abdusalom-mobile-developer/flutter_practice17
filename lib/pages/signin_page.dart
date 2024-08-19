@@ -15,11 +15,10 @@ class _SigninPageState extends State<SigninPage> {
   TextEditingController _passwordController = TextEditingController();
 
   _checkControllers() {
-    if (_emailAddressController.text.toLowerCase() == HomePage.emailAddress &&
-        _passwordController.text.toLowerCase() == HomePage.password) {
-      Navigator.pushReplacementNamed(
-        context, HomePage.id
-      );
+    if (_emailAddressController.text.toLowerCase().trim() ==
+            HomePage.emailAddress &&
+        _passwordController.text.toLowerCase().trim() == HomePage.password) {
+      Navigator.pushReplacementNamed(context, HomePage.id);
     }
   }
 
@@ -31,10 +30,10 @@ class _SigninPageState extends State<SigninPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Sign In",
+            "Yamaha",
             style: TextStyle(
                 fontSize: 50,
-                fontFamily: "Signika",
+                fontFamily: "Dancing",
                 fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -71,6 +70,7 @@ class _SigninPageState extends State<SigninPage> {
             width: double.infinity,
             margin: EdgeInsets.only(left: 25, right: 25),
             child: TextField(
+              obscureText: true,
               cursorColor: Colors.white,
               style: TextStyle(
                 color: Colors.white,

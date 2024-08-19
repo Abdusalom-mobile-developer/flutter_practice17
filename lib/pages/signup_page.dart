@@ -23,12 +23,12 @@ class _SignupPageState extends State<SignupPage> {
     //   Navigator.pushReplacementNamed(context, HomePage.id);
     // }
 
-    if (_userNameController.text.toLowerCase().length >= 7 &&
-        _emailAdressController.text.toLowerCase().contains("@") &&
-        _passwordController.text.toLowerCase().length >= 7) {
-      HomePage.username = _userNameController.text;
-      HomePage.emailAddress = _emailAdressController.text.toLowerCase();
-      HomePage.password = _passwordController.text.toLowerCase();
+    if (_userNameController.text.toLowerCase().trim().length >= 7 &&
+        _emailAdressController.text.toLowerCase().trim().contains("@") &&
+        _passwordController.text.toLowerCase().trim().length >= 7) {
+      HomePage.username = _userNameController.text.trim();
+      HomePage.emailAddress = _emailAdressController.text.toLowerCase().trim();
+      HomePage.password = _passwordController.text.toLowerCase().trim();
       Navigator.pushReplacementNamed(context, HomePage.id);
     }
   }
@@ -41,10 +41,10 @@ class _SignupPageState extends State<SignupPage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Sign Up",
+            "Yamaha",
             style: TextStyle(
                 fontSize: 50,
-                fontFamily: "Signika",
+                fontFamily: "Dancing",
                 fontWeight: FontWeight.bold),
           ),
           SizedBox(
